@@ -36,19 +36,6 @@ public class Program5 {
 		pos3.id = 3;
 		pos3.name = PositionName.Scrum_Master;
 
-		// Tao Group
-		Group group1 = new Group();
-		group1.id = 1;
-		group1.name = "Sale";
-
-		Group group2 = new Group();
-		group2.id = 2;
-		group2.name = "Development";
-
-		Group group3 = new Group();
-		group3.id = 3;
-		group3.name = "Management";
-
 		// Tao Account
 		Account acc1 = new Account();
 		acc1.id = 1;
@@ -58,8 +45,6 @@ public class Program5 {
 		acc1.department = dep1;
 		acc1.position = pos1;
 		acc1.createdate = LocalDate.now();
-		Group[] groupAcc1 = { group1, group2 };
-		acc1.groups = groupAcc1;
 
 		Account acc2 = new Account();
 		acc2.id = 2;
@@ -69,8 +54,6 @@ public class Program5 {
 		acc2.department = dep2;
 		acc2.position = pos2;
 		acc2.createdate = LocalDate.now();
-		Group[] groupAcc2 = { group1, group3 };
-		acc2.groups = groupAcc2;
 
 		Account acc3 = new Account();
 		acc3.id = 3;
@@ -80,8 +63,34 @@ public class Program5 {
 		acc3.department = dep3;
 		acc3.position = pos3;
 		acc3.createdate = LocalDate.now();
-		Group[] groupAcc3 = { group3, group2 };
-		acc3.groups = groupAcc3;
+
+		// Tao Group
+		Group group1 = new Group();
+		group1.id = 1;
+		group1.name = "Sale";
+		group1.creator = acc1;
+		group1.createdate = LocalDate.of(2020, 9, 23);
+
+		Group group2 = new Group();
+		group2.id = 2;
+		group1.creator = acc2;
+		group2.name = "Development";
+		group2.createdate = LocalDate.now();
+
+		Group group3 = new Group();
+		group3.id = 3;
+		group3.name = "Management";
+		group3.creator = acc3;
+		group3.createdate = LocalDate.of(2024, 10, 20);
+
+		Group[] groups_Account1 = { group1, group2 };
+		acc1.groups = groups_Account1;
+
+		Group[] groups_Account2 = { group1, group2, group3 };
+		acc2.groups = groups_Account2;
+
+		Group[] groups_Account3 = { group2 };
+		acc3.groups = groups_Account3;
 
 		System.out.println("Thông tin các Account trên hệ thống:");
 		System.out.println("Account 1: ID : " + acc1.id + " Email: " + acc1.email + " UserName: " + acc1.username
