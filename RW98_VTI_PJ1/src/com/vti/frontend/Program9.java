@@ -32,5 +32,6 @@ public class Program9 {
 		default:
 			System.out.println("nhap sai");
 		}
+
 	}
 }

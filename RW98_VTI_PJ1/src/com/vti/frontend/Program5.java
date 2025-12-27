@@ -1,6 +1,8 @@
 package com.vti.frontend;
 
 import java.time.LocalDate;
+import java.util.Random;
+import java.util.Scanner;
 
 import com.vti.entity.Account;
 import com.vti.entity.Department;
@@ -9,6 +11,8 @@ import com.vti.entity.Position;
 import com.vti.entity.Position.PositionName;
 
 public class Program5 {
+	Scanner scanner = new Scanner(System.in);
+
 	public static void main(String[] args) {
 		// Tao Department
 		Department dep1 = new Department();
@@ -30,11 +34,15 @@ public class Program5 {
 
 		Position pos2 = new Position();
 		pos2.id = 2;
-		pos2.name = PositionName.PM;
+		pos2.name = PositionName.Test;
 
 		Position pos3 = new Position();
 		pos3.id = 3;
 		pos3.name = PositionName.Scrum_Master;
+
+		Position pos4 = new Position();
+		pos4.id = 4;
+		pos4.name = PositionName.PM;
 
 		// Tao Account
 		Account acc1 = new Account();
@@ -371,6 +379,363 @@ public class Program5 {
 			} while (i <= 20);
 
 		}
+// Exercise 2
+		System.out.println("\n---------------------Exercise 2---------------");
+		{
+			int a = 5;
+			System.out.println(a);
+		}
+		{
+			System.out.println("Question 2");
+			int a = 100000000;
+			System.out.println(String.format("%,d", a));
+		}
+		{
+			System.out.println("Question 3");
+			float a = 5.567098f;
+			System.out.println(String.format("%.4f", a));
+		}
+		{
+			System.out.println("Question 4");
+			String a = "\"Nguyễn Văn A\"";
+			System.out.println("Ten toi la " + a + " va toi dan doc than.");
+		}
+		{
+
+		}
+
+		System.out.println("------------Exercise 5-----------");
+		Scanner scanner = new Scanner(System.in);
+//		{
+//			System.out.println("Question 1");
+//			System.out.println("Moi ban nhap 3 so nguyen: ");
+//			int a = scanner.nextInt();
+//			int b = scanner.nextInt();
+//			int c = scanner.nextInt();
+//
+//			System.out.println("Ba số vừa nhập: " + a + " " + b + " " + c);
+//		}
+//		{
+//			System.out.println("Question 2");
+//			System.out.println("Moi ban nhap 2 so thuc: ");
+//			double a = scanner.nextDouble();
+//			double b = scanner.nextDouble();
+//
+//			System.out.println("Hai số vừa nhập: " + a + " " + b + " ");
+//		}
+//		{
+//			System.out.println("Question 3");
+//			System.out.println("Moi ban nhap ho ten: ");
+//			String ten = scanner.nextLine();
+//			System.out.println("Thong tin cua ban la: " + ten);
+//		}
+//		{
+//			System.out.println("Question 4");
+//			System.out.println("Moi ban nhap ngay sinh nhat(dd/mm/yyyy):");
+//			String a = scanner.nextLine();
+//			DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+//			LocalDate b = LocalDate.parse(a, format);
+//			System.out.println("Ngay sinh cua ban la: " + b);
+//		}
+//		{
+//			System.out.println("Question 5");
+//
+//			Account acc = new Account();
+//
+//			System.out.print("Nhập ID: ");
+//			acc.id = scanner.nextInt();
+//
+//			System.out.print("Nhập Email: ");
+//			acc.email = scanner.nextLine();
+//
+//			System.out.print("Nhập Username: ");
+//			acc.username = scanner.nextLine();
+//
+//			System.out.print("Nhập Fullname: ");
+//			acc.fullname = scanner.nextLine();
+//
+//			System.out.println("Nhập Position (1-Dev | 2-Test | 3-ScrumMaster | 4-PM): ");
+//			int choose = scanner.nextInt();
+//
+//			switch (choose) {
+//			case 1:
+//				acc.position = pos1;
+//				break;
+//			case 2:
+//				acc.position = pos2;
+//				break;
+//			case 3:
+//				acc.position = pos3;
+//				break;
+//			case 4:
+//				acc.position = pos4;
+//				break;
+//			}
+//
+//			acc.createdate = LocalDate.now();
+//
+//		}
+//		{
+//			System.out.println("Question 6");
+//			Department dep = new Department();
+//			System.out.println("Nhap id: ");
+//			dep.id = scanner.nextInt();
+//			scanner.nextLine();
+//			System.out.println("Nhap ten: ");
+//			dep.name = scanner.nextLine();
+//			System.out.println("Thông tin Department vừa nhập, ID: " + dep.id + " Name: " + dep.name);
+//		}
+//		{
+//			System.out.println("Question 7");
+//			while (true) {
+//				System.out.print("Nhập số chẵn: ");
+//				int n = scanner.nextInt();
+//
+//				if (n % 2 == 0) {
+//					System.out.println("Số chẵn vừa nhập: " + n);
+//					break;
+//				}
+//				System.out.println("Vui lòng nhập lại");
+//			}
+//		}
+		{
+			System.out.println("Question 8");
+			while (true) {
+				System.out.println("Moi ban nhap vao chuc nang muon su dung:");
+				int a = scanner.nextInt();
+				if (a == 1 || a == 2 || a == 3) {
+					switch (a) {
+					case 1:
+						question5();
+						break;
+					case 2:
+						question6();
+						break;
+					case 3:
+						question9();
+						break;
+					case 4:
+						question10();
+						break;
+					}
+					System.out.println("Bạn có muốn thực hiện chức năng khác không?");
+					int b = scanner.nextInt();
+					if (b == 0) {
+						System.out.println("Quit");
+						break;
+					}
+				}
+				System.out.println("Moi ban nhap lai!!");
+			}
+		}
+
+	}
+
+	public static void question9() {
+		Scanner scanner = new Scanner(System.in);
+		Account acc1 = new Account();
+		acc1.id = 1;
+		acc1.email = "acc1@gmail.com";
+		acc1.username = "acc1";
+		acc1.fullname = "Nguyen Van A";
+		acc1.createdate = LocalDate.now();
+
+		Account acc2 = new Account();
+		acc2.id = 2;
+		acc2.email = "acc2@gmail.com";
+		acc2.username = "acc2";
+		acc2.fullname = "Tran Thi B";
+		acc2.createdate = LocalDate.now();
+
+		Account acc3 = new Account();
+		acc3.id = 3;
+		acc3.email = "acc3@gmail.com";
+		acc3.username = "acc3";
+		acc3.fullname = "Cao Van C";
+		acc3.createdate = LocalDate.now();
+
+		Group group1 = new Group();
+		group1.id = 1;
+		group1.name = "Sale";
+		group1.createdate = LocalDate.of(2020, 9, 23);
+
+		Group group2 = new Group();
+		group2.id = 2;
+		group2.name = "Development";
+		group2.createdate = LocalDate.now();
+
+		Group group3 = new Group();
+		group3.id = 3;
+		group3.name = "Management";
+		group3.createdate = LocalDate.of(2024, 10, 20);
+
+		Account[] accArray = { acc1, acc2, acc3 };
+		Group[] groupArray = { group1, group2, group3 };
+		System.out.println("Ten cac username:");
+		for (int i = 0; i < accArray.length; i++) {
+			System.out.println(accArray[i].username);
+		}
+		System.out.println("Nhap username cua account:");
+		String username = scanner.nextLine();
+		for (int i = 0; i < groupArray.length; i++) {
+			System.out.println(groupArray[i].name);
+		}
+		System.out.println("Nhap name cua group:");
+		String name = scanner.nextLine();
+
+		int indexGroup = -1;
+		for (int i = 0; i < groupArray.length; i++) {
+			if (groupArray[i].name.equals(name)) {
+				indexGroup = i;
+			}
+		}
+		int indexAccount = -1;
+		for (int j = 0; j < accArray.length; j++) {
+			if (accArray[j].username.equals(username)) {
+				indexAccount = j;
+			}
+		}
+		if (indexAccount < 0 || indexGroup < 0) {
+			System.out.println("Kiểm tra lại thông tin bạn nhập, không có Account hoặc group này trên hệ thống");
+		} else {
+			Account[] accadd = { accArray[indexAccount] };
+			groupArray[indexGroup].accounts = accadd;
+			System.out.println("Bạn vừa Add account: " + groupArray[indexGroup].accounts[0].username + " cho group: "
+					+ groupArray[indexGroup].name);
+
+		}
+
+	}
+
+	public static void question10() {
+		Scanner scanner = new Scanner(System.in);
+		Account acc1 = new Account();
+		acc1.id = 1;
+		acc1.email = "acc1@gmail.com";
+		acc1.username = "acc1";
+		acc1.fullname = "Nguyen Van A";
+		acc1.createdate = LocalDate.now();
+
+		Account acc2 = new Account();
+		acc2.id = 2;
+		acc2.email = "acc2@gmail.com";
+		acc2.username = "acc2";
+		acc2.fullname = "Tran Thi B";
+		acc2.createdate = LocalDate.now();
+
+		Account acc3 = new Account();
+		acc3.id = 3;
+		acc3.email = "acc3@gmail.com";
+		acc3.username = "acc3";
+		acc3.fullname = "Cao Van C";
+		acc3.createdate = LocalDate.now();
+
+		Group group1 = new Group();
+		group1.id = 1;
+		group1.name = "Sale";
+		group1.createdate = LocalDate.of(2020, 9, 23);
+
+		Group group2 = new Group();
+		group2.id = 2;
+		group2.name = "Development";
+		group2.createdate = LocalDate.now();
+
+		Group group3 = new Group();
+		group3.id = 3;
+		group3.name = "Management";
+		group3.createdate = LocalDate.of(2024, 10, 20);
+
+		Account[] accArray = { acc1, acc2, acc3 };
+		Group[] groupArray = { group1, group2, group3 };
+		System.out.println("Ten cac username:");
+		for (int i = 0; i < accArray.length; i++) {
+			System.out.println(accArray[i].username);
+		}
+		System.out.println("Nhap username cua account:");
+		String username = scanner.nextLine();
+		for (int i = 0; i < groupArray.length; i++) {
+			System.out.println(groupArray[i].name);
+		}
+		Random random = new Random();
+		int c = random.nextInt(4);
+
+		int indexAccount = -1;
+		for (int j = 0; j < accArray.length; j++) {
+			if (accArray[j].username.equals(username)) {
+				indexAccount = j;
+			}
+		}
+		if (indexAccount < 0) {
+			System.out.println("Kiểm tra lại thông tin bạn nhập, không có Account  này trên hệ thống");
+		} else {
+			Account[] accadd = { accArray[indexAccount] };
+			groupArray[c].accounts = accadd;
+			System.out.println(
+					"Bạn vừa Add account: " + groupArray[c].accounts[0].username + " cho group: " + groupArray[c].name);
+
+		}
+
+	}
+
+	public static void question6() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Question 6");
+		Department dep = new Department();
+		System.out.println("Nhap id: ");
+		dep.id = scanner.nextInt();
+		scanner.nextLine();
+		System.out.println("Nhap ten: ");
+		dep.name = scanner.nextLine();
+		System.out.println("Thông tin Department vừa nhập, ID: " + dep.id + " Name: " + dep.name);
+	}
+
+	public static void question5() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Question 5");
+
+		Account acc = new Account();
+
+		System.out.print("Nhập ID: ");
+		acc.id = scanner.nextInt();
+
+		System.out.print("Nhập Email: ");
+		acc.email = scanner.nextLine();
+
+		System.out.print("Nhập Username: ");
+		acc.username = scanner.nextLine();
+
+		System.out.print("Nhập Fullname: ");
+		acc.fullname = scanner.nextLine();
+
+		System.out.println("Nhập Position (1-Dev | 2-Test | 3-ScrumMaster | 4-PM): ");
+		int choose = scanner.nextInt();
+
+		switch (choose) {
+		case 1:
+			Position pos1 = new Position();
+			pos1.name = PositionName.Dev;
+			acc.position = pos1;
+			break;
+		case 2:
+			Position pos2 = new Position();
+			pos2.name = PositionName.Test;
+			acc.position = pos2;
+			break;
+		case 3:
+			Position pos3 = new Position();
+			pos3.name = PositionName.Scrum_Master;
+			acc.position = pos3;
+			break;
+		case 4:
+			Position pos4 = new Position();
+			pos4.name = PositionName.PM;
+			acc.position = pos4;
+			break;
+		}
+
+		acc.createdate = LocalDate.now();
+		System.out.println("Thông tin Acc vừa nhập, ID: " + acc.id + " Email: " + acc.email + " UserName: "
+				+ acc.username + " FullName: " + acc.fullname + " Position: " + acc.position.name);
 
 	}
 }

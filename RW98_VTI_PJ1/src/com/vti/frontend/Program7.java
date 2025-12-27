@@ -19,11 +19,15 @@ public class Program7 {
 //		int result = number1 + number2;
 //		System.out.println("tong cua 2 so la: " + result);
 
-		System.out.println("Moi ban nhap ten: ");
-		String ten = scanner.nextLine();
-		scanner.close();
-		System.out.println("Moi ban nhap tuoi: ");
-		int tuoi = scanner.nextInt();
-		System.out.println("Thong tin cua ban la: " + ten + " ," + tuoi + " tuoi.");
+//		System.out.println("Moi ban nhap ten: ");
+//		String ten = scanner.nextLine();
+//		scanner.close();
+//		System.out.println("Moi ban nhap tuoi: ");
+//		int tuoi = scanner.nextInt();
+//		System.out.println("Thong tin cua ban la: " + ten + " ," + tuoi + " tuoi.");
+		String[] nameRailway98 = { "Tiến", "Nam", "Hương", "Bình", "Trinh", "Lâm", "Hùng", "Hoàng" };
+		for (String name : nameRailway98) {
+			System.out.println(name);
+		}
 	}
 }

@@ -1,5 +1,6 @@
 package com.vti.frontend;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Program8 {
@@ -16,11 +17,59 @@ public class Program8 {
 //		} else {
 //			System.out.println(number1 + " = " + number2);
 //		}
-
-		System.out.println("Moi ban nhap tuoi: ");
-		int age = scanner.nextInt();
-
-		String ageinfo = (age > 0) ? "Thong tin chinh xac" : "Thong tin chua chinh xac!!";
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+		{
+			Random random = new Random();
+			int a = random.nextInt(4);
+			System.out.println(a);
+		}
+//		int age = scanner.nextInt();
+//
+//		String ageinfo = (age > 0) ? "Thong tin chinh xac" : "Thong tin chua chinh xac!!";
 
 	}
 }
